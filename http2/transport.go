@@ -1820,7 +1820,7 @@ var (
 // It returns max(1, min(peer's advertised max frame size,
 // Request.ContentLength+1, 512KB)).
 func (cs *clientStream) frameScratchBufferLen(maxFrameSize int) int {
-	const max = 512 << 10
+	const max = 32 << 10
 	n := int64(maxFrameSize)
 	if n > max {
 		n = max
