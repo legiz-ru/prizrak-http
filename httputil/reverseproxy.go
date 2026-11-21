@@ -935,7 +935,7 @@ func cleanQueryParams(s string) string {
 	}
 	if numParams := strings.Count(s, "&") + 1; numParams > defaultMaxParams {
 		// Too many query parameters.
-		return reencode(s)
+		return ""
 	}
 	for i := 0; i < len(s); {
 		switch s[i] {
